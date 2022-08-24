@@ -16,7 +16,7 @@ const BlogDetail = () => {
     };
     const fetchDetails = async () => {
         const res = await axios
-            .get(`https://fitplus-project-frontend.vercel.app/api/blog/${id}`)
+            .get(`https://fitplus-project-backend.vercel.app/api/blog/${id}`)
             .catch((err) => console.log(err));
         const data = await res.data;
         return data;
