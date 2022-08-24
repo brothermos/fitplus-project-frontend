@@ -20,7 +20,7 @@ const AddBlog = () => {
     };
     const sendRequest = async () => {
         const res = await axios
-            .post("http://localhost:5000/api/blog/add", {
+            .post("https://fitplus-project-backend.vercel.app/api/blog/add", {
                 activity: inputs.activity,
                 date: inputs.date,
                 duration: inputs.duration,

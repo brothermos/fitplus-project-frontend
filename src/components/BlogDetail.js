@@ -16,7 +16,7 @@ const BlogDetail = () => {
     };
     const fetchDetails = async () => {
         const res = await axios
-            .get(`http://localhost:5000/api/blog/${id}`)
+            .get(`https://fitplus-project-frontend.vercel.app/api/blog/${id}`)
             .catch((err) => console.log(err));
         const data = await res.data;
         return data;
@@ -35,7 +35,7 @@ const BlogDetail = () => {
     }, [id]);
     const sendRequest = async () => {
         const res = await axios
-            .put(`http://localhost:5000/api/blog/update/${id}`, {
+            .put(`https://fitplus-project-backend.vercel.app/api/blog/update/${id}`, {
                 activity: inputs.activity,
                 date: inputs.date,
                 duration: inputs.duration,
