@@ -6,7 +6,7 @@ const UserBlogs = () => {
     const id = localStorage.getItem("userId");
     const sendRequest = async () => {
         const res = await axios
-            .get(`https://fitplus-project-backend.vercel.app/blog/user/${id}`)
+            .get(`https://fitplus-project-backend.vercel.app/api/blog/user/${id}`)
             .catch((err) => console.log(err));
         const data = await res.data;
         return data;
