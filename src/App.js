@@ -3,10 +3,11 @@ import Blogs from "./components/Blogs";
 import UserBlogs from "./components/UserBlogs";
 import BlogDetail from "./components/BlogDetail";
 import AddBlog from "./components/AddBlog";
-
+import Home from "./components/Home";
+import Auth from "./components/Auth";
 import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import Auth from "./components/Auth";
+
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "./store";
 
@@ -33,6 +34,7 @@ function App() {
                         <Route path="/auth" element={<Auth />} />
                     ) : (
                         <>
+                            <Route path="/" element={<Home />} />
                             <Route path="/blogs" element={<Blogs />} />
                             <Route path="/blogs/add" element={<AddBlog />} />
                             <Route path="/myBlogs" element={<UserBlogs />} />
