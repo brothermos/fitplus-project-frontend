@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Blog from "../Blog/Blog";
+import { Grid } from "@mui/material";
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState();
@@ -21,7 +22,7 @@ const Blogs = () => {
         <div>
             {blogs &&
                 blogs.map((blog, index) => (
-                    <Blog
+                    <Grid item xs={2} sm={4} md={4} key={index}
                         id={blog._id}
                         isUser={localStorage.getItem("userId") === blog.user._id}
                         activity={blog.activity}
