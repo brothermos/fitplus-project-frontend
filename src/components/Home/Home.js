@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/8225.jpg";
+import image from '../../assets/8225.jpg'
 import "./Home.css";
 import {  Typography } from "@mui/material";
 const Home = () => {

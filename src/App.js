@@ -1,10 +1,10 @@
-import Header from "./components/Header";
-import Blogs from "./components/Blogs";
-import UserBlogs from "./components/UserBlogs";
-import BlogDetail from "./components/BlogDetail";
-import AddBlog from "./components/AddBlog";
-import Home from "./components/Home";
-import Auth from "./components/Auth";
+import Header from "./components/Header/Header";
+import Blogs from "./components/Blogs/Blogs";
+import UserBlogs from "./components/UserBlogs/UserBlogs";
+import BlogDetail from "./components/BlogDetail/BlogDetail";
+import AddBlog from "./components/AddBlog/AddBlog";
+import Home from "./components/Home/Home";
+import Auth from './components/Auth/Auth'
 import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 
