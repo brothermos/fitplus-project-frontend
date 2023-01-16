@@ -4,6 +4,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { authActions } from "../store";
 import { useNavigate } from "react-router-dom";
+import './Auth.css'
 
 const Auth = () => {
     const naviagte = useNavigate();
@@ -50,7 +51,7 @@ const Auth = () => {
         }
     };
     return (
-        <div>
+        <div className="auth-box">
             <form onSubmit={handleSubmit}>
                 <Box
                     maxWidth={400}
@@ -61,8 +62,8 @@ const Auth = () => {
                     boxShadow="10px 10px 20px #ccc"
                     padding={3}
                     margin="auto"
-                    marginTop={5}
-                    borderRadius={5}
+                    marginTop={13}
+                    borderRadius={3}
                 >
                     <Typography variant="h2" padding={3} textAlign="center" color="#4158D0">
                         {isSignup ? "Signup" : "Login"}

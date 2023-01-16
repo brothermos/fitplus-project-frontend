@@ -60,7 +60,7 @@ const Header = () => {
                                 LinkComponent={Link}
                                 to="/auth"
                                 variant="contained"
-                                sx={{ margin: 1, borderRadius: 10 }}
+                                sx={{ margin: 1, borderRadius: 3 }}
                                 color="warning"
                             >
                                 Login
@@ -69,7 +69,7 @@ const Header = () => {
                                 LinkComponent={Link}
                                 to="/auth"
                                 variant="contained"
-                                sx={{ margin: 1, borderRadius: 10 }}
+                                sx={{ margin: 1, borderRadius: 3 }}
                                 color="warning"
                             >
                                 Signup
@@ -82,7 +82,7 @@ const Header = () => {
                             LinkComponent={Link}
                             to="/auth"
                             variant="contained"
-                            sx={{ margin: 1, borderRadius: 10 }}
+                            sx={{ margin: 1, borderRadius: 3 }}
                             color="warning"
                         >
                             Logout

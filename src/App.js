@@ -30,11 +30,11 @@ function App() {
             </header>
             <main>
                 <Routes>
+                    <Route path="/" element={<Home />} />
                     {!isLoggedIn ? (
                         <Route path="/auth" element={<Auth />} />
                     ) : (
                         <>
-                            <Route path="/" element={<Home />} />
                             <Route path="/blogs" element={<Blogs />} />
                             <Route path="/blogs/add" element={<AddBlog />} />
                             <Route path="/myBlogs" element={<UserBlogs />} />
