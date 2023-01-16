@@ -25,10 +25,10 @@ const Blog = ({ activity, date, duration, calories, userName, note, isUser, id }
     return (
         <div>
             {" "}
-            <Card className="card" sx={{ minWidth: 525 }}>
+            <Card className="card"  >
                 {isUser && (
-                    <Box display="flex">
-                        <IconButton onClick={handleEdit} sx={{ marginLeft: "auto" }}>
+                    <Box display="flex" >
+                        <IconButton onClick={handleEdit} sx={{ marginLeft: "auto" }} >
                             <ModeEditOutlineIcon color="warning" />
                         </IconButton>
                         <IconButton onClick={handleDelete}>
@@ -37,7 +37,7 @@ const Blog = ({ activity, date, duration, calories, userName, note, isUser, id }
                     </Box>
                 )}
                 <CardContent className="card-content">
-                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                    <Typography sx={{ fontSize: 14 }} color="" gutterBottom>
                         Date: {date}
                     </Typography>
                     <Typography sx={{ mb: 1.5 }} variant="h5" component="div">
