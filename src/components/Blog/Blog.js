@@ -25,7 +25,7 @@ const Blog = ({ activity, date, duration, calories, userName, note, isUser, id }
     return (
         <div>
             {" "}
-            <Card className="card" sx={{ minWidth: 275 }}>
+            <Card className="card" sx={{ minWidth: 525 }}>
                 {isUser && (
                     <Box display="flex">
                         <IconButton onClick={handleEdit} sx={{ marginLeft: "auto" }}>
