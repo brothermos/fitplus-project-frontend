@@ -4,24 +4,37 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { authActions } from "../../store";
 import { useNavigate } from "react-router-dom";
-import './Auth.css'
+import "./Auth.css";
 
 const Auth = () => {
+
+    // พาไป path ที่กำหนด
     const naviagte = useNavigate();
+
+    // เรียกใช้งาน dispath
     const dispath = useDispatch();
+
+    // state เพื่อเก็บค่าตอนลงทะเบียน
     const [inputs, setInputs] = useState({
         name: "",
         email: "",
         password: "",
     });
+
+    // state ลงทะเบียน
     const [isSignup, setIsSignup] = useState(false);
+
+    // เปลี่ยนค่าใน form
     const handleChange = (e) => {
         setInputs((prevState) => ({
             ...prevState,
             [e.target.name]: e.target.value,
         }));
     };
+
+    // ส่งค่าไป backend
     const sendRequest = async (type = "login") => {
+        // axios.post ไปหา backend path
         const res = await axios
             .post(`https://fitplus-project-backend.vercel.app/api/user/${type}`, {
                 name: inputs.name,
@@ -35,12 +48,15 @@ const Auth = () => {
         return data;
     };
 
+    // submit button
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(inputs);
         if (isSignup) {
+            // register
             sendRequest("signup")
                 .then((data) => localStorage.setItem("userId", data.user._id))
+                // update authActions
                 .then(() => dispath(authActions.login()))
                 .then(() => naviagte("/blogs"));
         } else {

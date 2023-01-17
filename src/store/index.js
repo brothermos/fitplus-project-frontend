@@ -2,6 +2,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const authSlice = createSlice({
     name: "auth",
+    // state เริ่มต้น
     initialState: { isLoggedIn: false },
     reducers: {
         login(state) {
