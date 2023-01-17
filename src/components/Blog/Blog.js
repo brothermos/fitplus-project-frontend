@@ -25,10 +25,10 @@ const Blog = ({ activity, date, duration, calories, userName, note, isUser, id }
     return (
         <div>
             {" "}
-            <Card className="card"  >
+            <Card className="card">
                 {isUser && (
-                    <Box display="flex" >
-                        <IconButton onClick={handleEdit} sx={{ marginLeft: "auto" }} >
+                    <Box display="flex" sx={{ backgroundColor: "primary.dark" }}>
+                        <IconButton onClick={handleEdit} sx={{ marginLeft: "auto" }}>
                             <ModeEditOutlineIcon color="warning" />
                         </IconButton>
                         <IconButton onClick={handleDelete}>
